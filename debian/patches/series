@@ -1,3 +1,13 @@
 1003-custom-lib-names.patch
 2003-disable-expand_tilde_unix-test.patch
 2004-install-static-lib.patch
+CVE-2023-1667-1.patch
+CVE-2023-1667-2.patch
+CVE-2023-1667-3.patch
+CVE-2023-1667-4.patch
+CVE-2023-1667-5.patch
+CVE-2023-1667-6.patch
+CVE-2023-1667-7.patch
+CVE-2023-1667-8.patch
+CVE-2023-2283-1.patch
+CVE-2023-2283-2.patch

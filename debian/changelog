@@ -1,3 +1,17 @@
+libssh (0.9.6-2ubuntu0.22.04.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Potential NULL dereference during rekeying with
+    algorithm guessing
+    - debian/patches/CVE-2023-1667-*.patch: upstream patches to fix the
+      issue.
+    - CVE-2023-1667
+  * SECURITY UPDATE: Authorization bypass in pki_verify_data_signature
+    - debian/patches/CVE-2023-2283-*.patch: upstream patches to fix the
+      issue.
+    - CVE-2023-2283
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 26 May 2023 06:31:25 -0400
+
 libssh (0.9.6-2build1) jammy; urgency=high
 
   * No change rebuild for ppc64el baseline bump.
