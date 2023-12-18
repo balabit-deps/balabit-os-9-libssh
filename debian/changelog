@@ -1,3 +1,16 @@
+libssh (0.9.6-2ubuntu0.22.04.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Prefix truncation attack on BPP
+    - debian/patches/CVE-2023-48795-1.patch: add client side mitigation.
+    - debian/patches/CVE-2023-48795-2.patch: add server side mitigations.
+    - debian/patches/CVE-2023-48795-3.patch: strip extensions from both kex
+      lists for matching.
+    - debian/patches/CVE-2023-48795-4.patch: tests: adjust calculation to
+      strict kex.
+    - CVE-2023-48795
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 18 Dec 2023 17:30:05 -0500
+
 libssh (0.9.6-2ubuntu0.22.04.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Potential NULL dereference during rekeying with
