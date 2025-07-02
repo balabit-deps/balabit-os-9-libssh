@@ -32,3 +32,10 @@ CVE-2023-6918-2.patch
 CVE-2023-6918-3.patch
 CVE-2023-6918-4.patch
 CVE-2023-6918-5.patch
+CVE-2025-4877.patch
+CVE-2025-5318.patch
+CVE-2025-4878-1.patch
+CVE-2025-4878-2.patch
+CVE-2025-5372-pre1.patch
+CVE-2025-5372.patch
+missing_packet_filter.patch

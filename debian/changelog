@@ -1,3 +1,33 @@
+libssh (0.9.6-2ubuntu0.22.04.4) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Write beyond bounds in binary to base64 conversion
+    functions
+    - debian/patches/CVE-2025-4877.patch: prevent integer overflow and
+      potential OOB.
+    - CVE-2025-4877
+  * SECURITY UPDATE: Use of uninitialized variable in
+    privatekey_from_file()
+    - debian/patches/CVE-2025-4878-1.patch: initialize pointers where
+      possible.
+    - debian/patches/CVE-2025-4878-2.patch: properly check return value to
+      avoid NULL pointer dereference.
+    - CVE-2025-4878
+  * SECURITY UPDATE: OOB read in sftp_handle function
+    - debian/patches/CVE-2025-5318.patch: fix possible buffer overrun.
+    - CVE-2025-5318
+  * SECURITY UPDATE: ssh_kdf() returns a success code on certain failures
+    - debian/patches/CVE-2025-5372-pre1.patch: Reformat ssh_kdf().
+    - debian/patches/CVE-2025-5372.patch: simplify error checking and
+      handling of return codes in ssh_kdf().
+    - CVE-2025-5372
+  * SECURITY UPDATE: Missing packet filter may expose to variant of
+    Terrapin attack
+    - debian/patches/missing_packet_filter.patch: implement missing packet
+      filter for DH GEX.
+    - No CVE number
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 02 Jul 2025 14:48:47 -0400
+
 libssh (0.9.6-2ubuntu0.22.04.3) jammy-security; urgency=medium
 
   * SECURITY UPDATE: code injection via ProxyCommand/ProxyJump hostname
