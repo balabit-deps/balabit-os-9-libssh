@@ -39,3 +39,4 @@ CVE-2025-4878-2.patch
 CVE-2025-5372-pre1.patch
 CVE-2025-5372.patch
 missing_packet_filter.patch
+CVE-2025-8114.patch

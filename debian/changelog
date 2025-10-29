@@ -1,3 +1,12 @@
+libssh (0.9.6-2ubuntu0.22.04.5) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: NULL pointer dereference
+    - debian/patches/CVE-2025-8114.patch: sets rc to SSH_ERROR prior to goto
+      error in ssh_make_sessionid() of src/kex.c.
+    - CVE-2025-8114
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Wed, 29 Oct 2025 14:58:26 +0200
+
 libssh (0.9.6-2ubuntu0.22.04.4) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Write beyond bounds in binary to base64 conversion
