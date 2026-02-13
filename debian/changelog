@@ -1,3 +1,50 @@
+libssh (0.9.6-2ubuntu0.22.04.6) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: memory leak in key exchange
+    - debian/patches/CVE-2025-8277-1.patch: adjust packet filter to work
+      when DH-GEX is guessed wrongly in src/packet.c.
+    - debian/patches/CVE-2025-8277-2.patch: fix memory leak of unused
+      ephemeral key pair after client's wrong KEX guess in src/dh_crypto.c,
+      src/dh_key.c, src/ecdh_crypto.c, src/ecdh_gcrypt.c,
+      src/ecdh_mbedcrypto.c.
+    - debian/patches/CVE-2025-8277-3.patch: free previously allocated
+      pubkeys in src/ecdh_crypto.c, src/ecdh_gcrypt.c.
+    - debian/patches/CVE-2025-8277-4.patch: avoid leaking ecdh keys in
+      src/ecdh_mbedcrypto.c, src/wrapper.c.
+    - CVE-2025-8277
+  * SECURITY UPDATE: Improper sanitation of paths received from SCP servers
+    - debian/patches/CVE-2026-0964.patch: reject invalid paths received
+      through scp in src/scp.c.
+    - CVE-2026-0964
+  * SECURITY UPDATE: DoS via improper configuration file handling
+    - debian/patches/CVE-2026-0965.patch: do not attempt to read
+      non-regular and too large configuration files in
+      include/libssh/misc.h, include/libssh/priv.h, src/bind_config.c,
+      src/config.c, src/dh-gex.c, src/known_hosts.c, src/knownhosts.c,
+      src/misc.c, tests/unittests/torture_config.c.
+    - CVE-2026-0965
+  * SECURITY UPDATE: Buffer underflow in ssh_get_hexa() on invalid input
+    - debian/patches/CVE-2026-0966-1.patch: avoid heap buffer underflow in
+      ssh_get_hexa in src/misc.c.
+    - debian/patches/CVE-2026-0966-2.patch: test coverage for ssh_get_hexa
+      in tests/unittests/torture_misc.c.
+    - debian/patches/CVE-2026-0966-3.patch: update guided tour to use
+      SHA256 fingerprints in doc/guided_tour.dox.
+    - CVE-2026-0966
+  * SECURITY UPDATE: DoS via inefficient regular expression processing
+    - debian/patches/CVE-2026-0967.patch: avoid recursive matching (ReDoS)
+      in src/match.c, tests/unittests/torture_config.c.
+    - CVE-2026-0967
+  * SECURITY UPDATE: DoS due to malformed SFTP message
+    - debian/patches/CVE-2026-0968-1.patch: sanitize input handling in
+      sftp_parse_longname() in src/sftp.c.
+    - debian/patches/CVE-2026-0968-2.patch: reproducer for invalid longname
+      data in tests/unittests/CMakeLists.txt,
+      tests/unittests/torture_unit_sftp.c.
+    - CVE-2026-0968
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 13 Feb 2026 10:22:49 -0500
+
 libssh (0.9.6-2ubuntu0.22.04.5) jammy-security; urgency=medium
 
   * SECURITY UPDATE: NULL pointer dereference

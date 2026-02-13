@@ -40,3 +40,15 @@ CVE-2025-5372-pre1.patch
 CVE-2025-5372.patch
 missing_packet_filter.patch
 CVE-2025-8114.patch
+CVE-2025-8277-1.patch
+CVE-2025-8277-2.patch
+CVE-2025-8277-3.patch
+CVE-2025-8277-4.patch
+CVE-2026-0964.patch
+CVE-2026-0965.patch
+CVE-2026-0966-1.patch
+CVE-2026-0966-2.patch
+CVE-2026-0966-3.patch
+CVE-2026-0967.patch
+CVE-2026-0968-1.patch
+CVE-2026-0968-2.patch
