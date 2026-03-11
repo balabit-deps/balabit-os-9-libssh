@@ -1,3 +1,12 @@
+libssh (0.9.6-2ubuntu0.22.04.7) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bound read
+    - debian/patches/CVE-2026-3731.patch: correct bounds checks when querying
+      for an SFTP extension name or data in src/sftp.c.
+    - CVE-2026-3731
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Wed, 11 Mar 2026 12:19:27 +0200
+
 libssh (0.9.6-2ubuntu0.22.04.6) jammy-security; urgency=medium
 
   * SECURITY UPDATE: memory leak in key exchange
